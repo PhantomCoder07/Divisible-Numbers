@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int num,a,b;
+    printf ("Enter a positive integer: ");
+    scanf ("%d",&num);
+    printf ("Enter two divisible numbers: ");
+    scanf ("%d %d",&a,&b);
+    switch (num%a==0)
+    {
+    case 1:
+        switch (num%b==0)
+        {
+        case 1:
+            printf ("%d is Divisible by both %d and %d.",num,a,b);
+            break;
+        default:
+            printf ("%d is Divisible by %d.",num,a);
+        }
+        break;
+    default:
+        switch (num%b==0)
+        {
+        case 1:
+            printf ("%d is Divisible by %d.",num,b);
+            break;
+        default:
+            printf ("%d is not Divisible.",num);
+        }
+    }
+    return 0;
+}
