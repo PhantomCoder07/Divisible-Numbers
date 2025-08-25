@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    int num,a,b;
+    printf ("Enter a positive integer: ");
+    scanf ("%d",&num);
+    printf ("Enter two divisible numbers: ");
+    scanf ("%d %d",&a,&b);
+    (num%a==0)?((num%b==0)?(printf ("%d is Divisible by both %d and %d.",num,a,b)):(printf ("%d is Divisible by %d.",num,a))):((num%b==0)?(printf ("%d is Divisible by %d.",num,b)):(printf ("%d is not Divisible.",num)));
+    return 0;
+}
