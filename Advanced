@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+    int n,m,i;
+    printf("Enter the lower limit: ");
+    scanf("%d",&n);
+    printf("Enter the upper limit: ");
+    scanf("%d",&m);
+    int a,b,count=0;
+    printf("Enter divisible numbers: ");
+    scanf("%d %d",&a,&b);
+    printf("The divisible by %d: ",a);
+    for (i=n; i<=m; i++)
+    {
+        if (i%a==0)
+        {
+            printf("%d ",i);
+            count++;
+        }
+    }
+    printf("\nTotal number: %d\n",count);
+    count=0;
+    printf("The divisible by %d: ",b);
+    for (i=n; i<=m; i++)
+    {
+        if (i%b==0)
+        {
+            printf("%d ",i);
+            count++;
+        }
+    }
+    printf("\nTotal number: %d\n",count);
+    count=0;
+    printf("The divisible by both %d and %d: ",a,b);
+    for (i=n; i<=m; i++)
+    {
+        if (i%a==0 && i%b==0)
+        {
+            printf("%d ",i);
+            count++;
+        }
+    }
+    printf("\nTotal number: %d\n",count);
+    return 0;
+}
